@@ -132,20 +132,6 @@ button {width: auto; overflow: visible;}
 .clearfix { zoom: 1; }  
 
 
-/* Bootstrap nice normalizing code http://twitter.github.com/bootstrap/
--------------------------------------------------------------------------------*/
-
-table { max-width: 100%; border-collapse: collapse; border-spacing: 0; background-color: transparent; } .table { width: 100%; margin-bottom: 18px; } .table th, .table td { padding: 8px; line-height: 18px; text-align: left; vertical-align: top; border-top: 1px solid #dddddd; } .table th { font-weight: bold; } .table thead th { vertical-align: bottom; } .table colgroup + thead tr:first-child th, .table colgroup + thead tr:first-child td, .table thead:first-child tr:first-child th, .table thead:first-child tr:first-child td { border-top: 0; } .table tbody + tbody { border-top: 2px solid #dddddd; } .table-condensed th, .table-condensed td { padding: 4px 5px; } .table-bordered { border: 1px solid #dddddd; border-left: 0; border-collapse: separate; *border-collapse: collapsed; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; } .table-bordered th, .table-bordered td { border-left: 1px solid #dddddd; } .table-bordered thead:first-child tr:first-child th, .table-bordered tbody:first-child tr:first-child th, .table-bordered tbody:first-child tr:first-child td { border-top: 0; } .table-bordered thead:first-child tr:first-child th:first-child, .table-bordered tbody:first-child tr:first-child td:first-child { -webkit-border-radius: 4px 0 0 0; -moz-border-radius: 4px 0 0 0; border-radius: 4px 0 0 0; } .table-bordered thead:first-child tr:first-child th:last-child, .table-bordered tbody:first-child tr:first-child td:last-child { -webkit-border-radius: 0 4px 0 0; -moz-border-radius: 0 4px 0 0; border-radius: 0 4px 0 0; } .table-bordered thead:last-child tr:last-child th:first-child, .table-bordered tbody:last-child tr:last-child td:first-child { -webkit-border-radius: 0 0 0 4px; -moz-border-radius: 0 0 0 4px; border-radius: 0 0 0 4px; } .table-bordered thead:last-child tr:last-child th:last-child, .table-bordered tbody:last-child tr:last-child td:last-child { -webkit-border-radius: 0 0 4px 0; -moz-border-radius: 0 0 4px 0; border-radius: 0 0 4px 0; } .table-striped tbody tr:nth-child(odd) td, .table-striped tbody tr:nth-child(odd) th { background-color: #f9f9f9; } .table tbody tr:hover td, .table tbody tr:hover th { background-color: #f5f5f5; } table .span1 { float: none; width: 44px; margin-left: 0; } table .span2 { float: none; width: 124px; margin-left: 0; } table .span3 { float: none; width: 204px; margin-left: 0; } table .span4 { float: none; width: 284px; margin-left: 0; } table .span5 { float: none; width: 364px; margin-left: 0; } table .span6 { float: none; width: 444px; margin-left: 0; } table .span7 { float: none; width: 524px; margin-left: 0; } table .span8 { float: none; width: 604px; margin-left: 0; } table .span9 { float: none; width: 684px; margin-left: 0; } table .span10 { float: none; width: 764px; margin-left: 0; } table .span11 { float: none; width: 844px; margin-left: 0; } table .span12 { float: none; width: 924px; margin-left: 0; } table .span13 { float: none; width: 1004px; margin-left: 0; } table .span14 { float: none; width: 1084px; margin-left: 0; } table .span15 { float: none; width: 1164px; margin-left: 0; } table .span16 { float: none; width: 1244px; margin-left: 0; } table .span17 { float: none; width: 1324px; margin-left: 0; } table .span18 { float: none; width: 1404px; margin-left: 0; } table .span19 { float: none; width: 1484px; margin-left: 0; } table .span20 { float: none; width: 1564px; margin-left: 0; } table .span21 { float: none; width: 1644px; margin-left: 0; } table .span22 { float: none; width: 1724px; margin-left: 0; } table .span23 { float: none; width: 1804px; margin-left: 0; } table .span24 { float: none; width: 1884px; margin-left: 0; } 
-
-
-/* Nice buttons http://charliepark.org/bootstrap_buttons/  */
-
-.btn { display: inline-block; *display: inline; /* IE7 inline-block hack */ 
-
-*zoom: 1; padding: 4px 10px 4px; margin-bottom: 0; font-size: 13px; line-height: 18px; color: #333333; text-align: center; text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75); vertical-align: middle; background-color: #f5f5f5; background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6); background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6); background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6)); background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6); background-image: -o-linear-gradient(top, #ffffff, #e6e6e6); background-image: linear-gradient(top, #ffffff, #e6e6e6); background-repeat: repeat-x; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0); border-color: #e6e6e6 #e6e6e6 #bfbfbf; border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); filter: progid:dximagetransform.microsoft.gradient(enabled=false); border: 1px solid #cccccc; border-bottom-color: #b3b3b3; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); cursor: pointer; *margin-left: .3em; } .btn:hover, .btn:active, .btn.active, .btn.disabled, .btn[disabled] { background-color: #e6e6e6; } .btn:active, .btn.active { background-color: #cccccc \9; } .btn:first-child { *margin-left: 0; } .btn:hover { color: #333333; text-decoration: none; background-color: #e6e6e6; background-position: 0 -15px; -webkit-transition: background-position 0.1s linear; -moz-transition: background-position 0.1s linear; -ms-transition: background-position 0.1s linear; -o-transition: background-position 0.1s linear; transition: background-position 0.1s linear; } .btn:focus { outline: thin dotted #333; outline: 5px auto -webkit-focus-ring-color; outline-offset: -2px; } .btn.active, .btn:active { background-image: none; -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); background-color: #e6e6e6; background-color: #d9d9d9 \9; outline: 0; } 
-
-
-
 /* Ok, this is where the fun starts.
 -------------------------------------------------------------------------------*/
 
@@ -239,6 +225,406 @@ ol.commentlist li.thread-even {}
 ol.commentlist li.thread-odd {}
 
 
+
+/* Tables http://twitter.github.com/bootstrap/base-css.html#tables
+-------------------------------------------------------------------------------*/
+
+table {
+  max-width: 100%;
+  background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+.table th,
+.table td {
+  padding: 8px;
+  line-height: 18px;
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid #dddddd;
+}
+
+.table th {
+  font-weight: bold;
+}
+
+.table thead th {
+  vertical-align: bottom;
+}
+
+.table caption + thead tr:first-child th,
+.table caption + thead tr:first-child td,
+.table colgroup + thead tr:first-child th,
+.table colgroup + thead tr:first-child td,
+.table thead:first-child tr:first-child th,
+.table thead:first-child tr:first-child td {
+  border-top: 0;
+}
+
+.table tbody + tbody {
+  border-top: 2px solid #dddddd;
+}
+
+.table-condensed th,
+.table-condensed td {
+  padding: 4px 5px;
+}
+
+.table-bordered {
+  border: 1px solid #dddddd;
+  border-collapse: separate;
+  *border-collapse: collapsed;
+  border-left: 0;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+
+.table-bordered th,
+.table-bordered td {
+  border-left: 1px solid #dddddd;
+}
+
+.table-bordered caption + thead tr:first-child th,
+.table-bordered caption + tbody tr:first-child th,
+.table-bordered caption + tbody tr:first-child td,
+.table-bordered colgroup + thead tr:first-child th,
+.table-bordered colgroup + tbody tr:first-child th,
+.table-bordered colgroup + tbody tr:first-child td,
+.table-bordered thead:first-child tr:first-child th,
+.table-bordered tbody:first-child tr:first-child th,
+.table-bordered tbody:first-child tr:first-child td {
+  border-top: 0;
+}
+
+.table-bordered thead:first-child tr:first-child th:first-child,
+.table-bordered tbody:first-child tr:first-child td:first-child {
+  -webkit-border-top-left-radius: 4px;
+          border-top-left-radius: 4px;
+  -moz-border-radius-topleft: 4px;
+}
+
+.table-bordered thead:first-child tr:first-child th:last-child,
+.table-bordered tbody:first-child tr:first-child td:last-child {
+  -webkit-border-top-right-radius: 4px;
+          border-top-right-radius: 4px;
+  -moz-border-radius-topright: 4px;
+}
+
+.table-bordered thead:last-child tr:last-child th:first-child,
+.table-bordered tbody:last-child tr:last-child td:first-child {
+  -webkit-border-radius: 0 0 0 4px;
+     -moz-border-radius: 0 0 0 4px;
+          border-radius: 0 0 0 4px;
+  -webkit-border-bottom-left-radius: 4px;
+          border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomleft: 4px;
+}
+
+.table-bordered thead:last-child tr:last-child th:last-child,
+.table-bordered tbody:last-child tr:last-child td:last-child {
+  -webkit-border-bottom-right-radius: 4px;
+          border-bottom-right-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+}
+
+.table-striped tbody tr:nth-child(odd) td,
+.table-striped tbody tr:nth-child(odd) th {
+  background-color: #f9f9f9;
+}
+
+.table tbody tr:hover td,
+.table tbody tr:hover th {
+  background-color: #f5f5f5;
+}
+
+table .span1 {
+  float: none;
+  width: 44px;
+  margin-left: 0;
+}
+
+table .span2 {
+  float: none;
+  width: 124px;
+  margin-left: 0;
+}
+
+table .span3 {
+  float: none;
+  width: 204px;
+  margin-left: 0;
+}
+
+table .span4 {
+  float: none;
+  width: 284px;
+  margin-left: 0;
+}
+
+table .span5 {
+  float: none;
+  width: 364px;
+  margin-left: 0;
+}
+
+table .span6 {
+  float: none;
+  width: 444px;
+  margin-left: 0;
+}
+
+table .span7 {
+  float: none;
+  width: 524px;
+  margin-left: 0;
+}
+
+table .span8 {
+  float: none;
+  width: 604px;
+  margin-left: 0;
+}
+
+table .span9 {
+  float: none;
+  width: 684px;
+  margin-left: 0;
+}
+
+table .span10 {
+  float: none;
+  width: 764px;
+  margin-left: 0;
+}
+
+table .span11 {
+  float: none;
+  width: 844px;
+  margin-left: 0;
+}
+
+table .span12 {
+  float: none;
+  width: 924px;
+  margin-left: 0;
+}
+
+table .span13 {
+  float: none;
+  width: 1004px;
+  margin-left: 0;
+}
+
+table .span14 {
+  float: none;
+  width: 1084px;
+  margin-left: 0;
+}
+
+table .span15 {
+  float: none;
+  width: 1164px;
+  margin-left: 0;
+}
+
+table .span16 {
+  float: none;
+  width: 1244px;
+  margin-left: 0;
+}
+
+table .span17 {
+  float: none;
+  width: 1324px;
+  margin-left: 0;
+}
+
+table .span18 {
+  float: none;
+  width: 1404px;
+  margin-left: 0;
+}
+
+table .span19 {
+  float: none;
+  width: 1484px;
+  margin-left: 0;
+}
+
+table .span20 {
+  float: none;
+  width: 1564px;
+  margin-left: 0;
+}
+
+table .span21 {
+  float: none;
+  width: 1644px;
+  margin-left: 0;
+}
+
+table .span22 {
+  float: none;
+  width: 1724px;
+  margin-left: 0;
+}
+
+table .span23 {
+  float: none;
+  width: 1804px;
+  margin-left: 0;
+}
+
+table .span24 {
+  float: none;
+  width: 1884px;
+  margin-left: 0;
+}
+
+
+/*  Buttons
+	
+	Only include base Bootstrap button - http://twitter.github.com/bootstrap/base-css.html#buttons  
+	Button generator - http://charliepark.org/bootstrap_buttons/  */
+
+.btn {
+display: inline-block;
+*display: inline;
+padding: 4px 10px 4px;
+margin-bottom: 0;
+*margin-left: .3em;
+font-size: 13px;
+line-height: 18px;
+*line-height: 20px;
+color: #333333;
+text-align: center;
+text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+vertical-align: middle;
+cursor: pointer;
+background-color: #f5f5f5;
+*background-color: #e6e6e6;
+background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
+background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+background-image: linear-gradient(top, #ffffff, #e6e6e6);
+background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+background-repeat: repeat-x;
+border: 1px solid #cccccc;
+*border: 0;
+border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+border-bottom-color: #b3b3b3;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
+filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+*zoom: 1;
+-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.btn:hover,
+.btn:active,
+.btn.active,
+.btn.disabled,
+.btn[disabled] {
+background-color: #e6e6e6;
+*background-color: #d9d9d9;
+}
+
+.btn:active,
+.btn.active {
+background-color: #cccccc \9;
+}
+
+.btn:first-child {
+*margin-left: 0;
+}
+
+.btn:hover {
+color: #333333;
+text-decoration: none;
+background-color: #e6e6e6;
+*background-color: #d9d9d9;
+/* Buttons in IE7 don't get borders, so darken on hover */
+
+background-position: 0 -15px;
+-webkit-transition: background-position 0.1s linear;
+-moz-transition: background-position 0.1s linear;
+-ms-transition: background-position 0.1s linear;
+-o-transition: background-position 0.1s linear;
+transition: background-position 0.1s linear;
+}
+
+.btn:focus {
+outline: thin dotted #333;
+outline: 5px auto -webkit-focus-ring-color;
+outline-offset: -2px;
+}
+
+.btn.active,
+.btn:active {
+background-color: #e6e6e6;
+background-color: #d9d9d9 \9;
+background-image: none;
+outline: 0;
+-webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+-moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.btn.disabled,
+.btn[disabled] {
+cursor: default;
+background-color: #e6e6e6;
+background-image: none;
+opacity: 0.65;
+filter: alpha(opacity=65);
+-webkit-box-shadow: none;
+-moz-box-shadow: none;
+box-shadow: none;
+}
+
+.btn-large {
+padding: 9px 14px;
+font-size: 15px;
+line-height: normal;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+}
+
+.btn-large [class^="icon-"] {
+margin-top: 1px;
+}
+
+.btn-small {
+padding: 5px 9px;
+font-size: 11px;
+line-height: 16px;
+}
+
+.btn-small [class^="icon-"] {
+margin-top: -1px;
+}
+
+.btn-mini {
+padding: 2px 6px;
+font-size: 11px;
+line-height: 14px;
+}
+
+
 /* Additional styles
 -------------------------------------------------------------------------------*/
 
@@ -325,7 +711,6 @@ input.wpcf7-submit {width:200px;height:30px;}
 /* Print styles!
 -------------------------------------------------------------------------------*/
 @media print {
-
 
 
 }
