@@ -25,9 +25,7 @@
 			<?php /* If this is a paged archive */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
 				<h2 class="pagetitle">Blog Archives</h2>
 			
-			<?php } ?>
-
-			
+			<?php } ?>			
 
 			<?php while (have_posts()) : the_post(); ?>
 			
@@ -49,7 +47,7 @@
 			
 	<?php else : ?>
 
-		<h2>Nothing found</h2>
+		<h2>No posts were found.</h2>
 
 	<?php endif; ?>
 

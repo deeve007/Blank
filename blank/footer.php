@@ -6,23 +6,20 @@
 
 	<?php wp_footer(); ?>
 
+  <!-- here comes the javascript -->
 
-<!-- here comes the javascript -->
+  <!-- jQuery is called via the Wordpress-friendly way via functions.php -->
 
-<!-- jQuery is called via the Wordpress-friendly way via functions.php -->
+  <!-- this is where we put our custom functions -->
+		<script src="<?php bloginfo('template_directory'); ?>/js/functions.js"></script>
 
-<!-- this is where we put our custom functions -->
-<script src="<?php bloginfo('template_directory'); ?>/js/functions.js"></script>
-
-  <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
-       mathiasbynens.be/notes/async-analytics-snippet -->
-  <script>
-    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-    s.parentNode.insertBefore(g,s)}(document,'script'));
-  </script>
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
 	
 </body>
-
 </html>

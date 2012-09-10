@@ -28,7 +28,7 @@
 
 	<?php else : ?>
 
-		<h2>No posts found.</h2>
+		<h2>No posts were found.</h2>
 
 	<?php endif; ?>
 
