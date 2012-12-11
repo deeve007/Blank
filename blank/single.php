@@ -4,17 +4,20 @@
 
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			
-			<h1 class="entry-title"><?php the_title(); ?></h1>
+			<header class="entry-header">
+				<h1 class="entry-title"><?php the_title(); ?></h1>
+			</header>		
 
 			<div class="entry-content">
 				
 				<?php the_content(); ?>
 
-				<?php wp_link_pages(array('before' => 'Pages: ', 'next_or_number' => 'number')); ?>
-				
-				<?php the_tags( 'Tags: ', ', ', ''); ?>
+				<?php wp_link_pages(array('before' => 'Pages: ', 'next_or_number' => 'number')); ?>	
 			
-				<?php include (TEMPLATEPATH . '/inc/meta.php' ); ?>
+				<footer class="entry-meta">						
+					<?php include (TEMPLATEPATH . '/inc/meta.php' ); ?>				
+					<?php the_tags( 'Tagged: ', ', ', ''); ?>
+				</footer>
 
 			</div>
 			

@@ -55,42 +55,40 @@
 	<?php else : ?>
 
 	<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
+	
+		 <fieldset>
 
-		<?php if ( is_user_logged_in() ) : ?>
+			<?php if ( is_user_logged_in() ) : ?>
 
 			<p>Logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="Log out of this account">Log out &raquo;</a></p>
 
-		<?php else : ?>
+			<?php else : ?>	
+				
+			<label class="control-label" for="author">Name</label>			
+			<input type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />			
+				
+			<label class="control-label" for="email">Email</label>				
+			<input type="text" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
+			
+			<label class="control-label" for="url">Website</label>
+			<input type="text" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3" />		
 
-			<div>
-				<input type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
-				<label for="author">Name <?php if ($req) echo "(required)"; ?></label>
+			<?php endif; ?>
+
+			<label class="control-label" for="comment">Comment</label>
+			<textarea name="comment" id="comment" cols="58" rows="5" tabindex="4"></textarea>
+
+			 <div class="control-group">
+			<div class="controls">			
+			<input name="submit" type="submit" id="submit" class="btn" tabindex="5" value="Post Comment" />
 			</div>
-
-			<div>
-				<input type="text" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
-				<label for="email">Mail (will not be published) <?php if ($req) echo "(required)"; ?></label>
 			</div>
-
-			<div>
-				<input type="text" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3" />
-				<label for="url">Website</label>
-			</div>
-
-		<?php endif; ?>
-
-		<!--<p>You can use these tags: <code><?php echo allowed_tags(); ?></code></p>-->
-
-		<div>
-			<textarea name="comment" id="comment" cols="58" rows="10" tabindex="4"></textarea>
-		</div>
-
-		<div>
-			<input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
+			
 			<?php comment_id_fields(); ?>
-		</div>
+			
+			<?php do_action('comment_form', $post->ID); ?>
 		
-		<?php do_action('comment_form', $post->ID); ?>
+		</fieldset>
 
 	</form>
 

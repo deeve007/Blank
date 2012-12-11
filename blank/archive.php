@@ -31,9 +31,10 @@
 			
 				<article <?php post_class() ?>>
 				
+					<header class="entry-header">
 						<h2 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
-					
 						<?php include (TEMPLATEPATH . '/inc/meta.php' ); ?>
+					</header>			
 
 						<div class="entry">
 							<?php the_content(); ?>

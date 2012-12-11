@@ -40,25 +40,18 @@
 	<!-- Mobile viewport optimized: h5bp.com/viewport -->
   <meta name="viewport" content="width=device-width">
 	
-	<!-- Favicons must be in root -->	
+	<!-- Place favicon.ico and apple-touch-icon.png in the theme root directory -->
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico">
-	<!-- This is the traditional favicon.
-		 - size: 16x16 or 32x32
-		 - transparency is OK
-		 - see wikipedia for info on browser support: http://mky.be/favicon/ -->
 		 
 	<link rel="apple-touch-icon" href="<?php bloginfo('template_directory'); ?>/apple-touch-icon-precomposed.png">
-	<!-- The is the icon for iOS's Web Clip.
-		 - size: 57x57 for older iPhones, 72x72 for iPads, 114x114 for iPhone4's retina display (IMHO, just go ahead and use the biggest one)
-		 - To prevent iOS from applying its styles to the icon name it thusly: apple-touch-icon-precomposed.png
-		 - Transparency is not recommended (iOS will put a black BG behind the icon) -->
+
 	
 	<!-- CSS: Include normalize. Screen, mobile & print are all in the same file -->
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/normalize.css">
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 	
 	<!-- all our JS is at the bottom of the page, except for Modernizr. -->
-	<script src="<?php bloginfo('template_directory'); ?>/js/modernizr-2.6.1.min.js"></script>
+	<script src="<?php bloginfo('template_directory'); ?>/js/vendor/modernizr-2.6.2.min.js"></script>
 	
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
@@ -79,7 +72,7 @@
 			<h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
 			<div class="description"><?php bloginfo('description'); ?></div>
 		
-			<nav>
+			<nav role="navigation">
 			<?php wp_nav_menu( array( 'theme_location' => 'primary-menu' ) ); ?>
 			</nav>
 		
