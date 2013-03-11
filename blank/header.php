@@ -44,9 +44,8 @@
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico">
 		 
 	<link rel="apple-touch-icon" href="<?php bloginfo('template_directory'); ?>/apple-touch-icon-precomposed.png">
-
 	
-	<!-- CSS: Include normalize. Screen, mobile & print are all in the same file -->
+	<!-- CSS: Include normalize (legacy browser support). Screen, mobile & print are all in the same file -->
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/normalize.css">
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 	

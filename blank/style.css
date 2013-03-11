@@ -2,7 +2,7 @@
 Theme Name: Blank
 Theme URI: http://schalkburger.za.net
 Description: A blank theme perfect for the starting point of any theme development.
-Version: 1.7
+Version: 1.8
 Author: Schalk Burger
 Author URI: http://schalkburger.za.net
 Tags: blank, basic, minimal, start, html5
@@ -117,6 +117,9 @@ a:link {-webkit-tap-highlight-color: #fcd700;}
 	
 #page-wrap {width: 960px; margin: 0px auto;}
 
+/* Your styles here */
+
+
 /* ==========================================================================
    Wordpress & Theme specific styles
    ========================================================================== */   
@@ -218,10 +221,6 @@ h1.entry-title {}
 
 /* Comment styles
 -------------------------------------------------------------------------------*/
-	
-#respond form#commentform {
-
-}
 	
 ol.commentlist {list-style: none;}
 ol.commentlist li {}
