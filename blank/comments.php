@@ -80,7 +80,7 @@
 
 			 <div class="control-group">
 			<div class="controls">			
-			<input name="submit" type="submit" id="submit" class="btn" tabindex="5" value="Post Comment" />
+			<input name="submit" type="submit" id="submit" tabindex="5" value="Post Comment" />
 			</div>
 			</div>
 			

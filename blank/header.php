@@ -18,10 +18,7 @@
 	
 	<!-- Consider using Wordpress SEO by Yoast: http://bit.ly/axBnIb and updating title tag: http://bit.ly/y1sxcw -->
 	
-	<title>
-	 <?php wp_title('|',true,'right'); ?>
-	 <?php bloginfo('name'); ?>
-	 </title>	
+	<title><?php wp_title('|',true,'right'); ?> <?php bloginfo('name'); ?> </title>	
 	
 	<!-- Remove meta description if using Wordpress SEO by Yoast -->	
 	<meta name="description" content="<?php bloginfo('description'); ?>">	
@@ -32,18 +29,11 @@
 	<meta name="author" content="Your Name Here">
 	<meta name="Copyright" content="Copyright Your Name Here 2012. All Rights Reserved.">
 
-	<!-- Dublin Core Metadata : http://dublincore.org/ -->
-	<meta name="DC.title" content="Project Name">
-	<meta name="DC.subject" content="What your project is about.">
-	<meta name="DC.creator" content="Who made this site.">
-	
 	<!-- Mobile viewport optimized: h5bp.com/viewport -->
-  <meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width">
 	
 	<!-- Place favicon.ico and apple-touch-icon.png in the theme root directory -->
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico">
-		 
-	<link rel="apple-touch-icon" href="<?php bloginfo('template_directory'); ?>/apple-touch-icon-precomposed.png">
 	
 	<!-- CSS: Include normalize (legacy browser support). Screen, mobile & print are all in the same file -->
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/normalize.css">
