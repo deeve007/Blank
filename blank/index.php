@@ -1,33 +1,50 @@
 <?php get_header(); ?>
 
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+	<!-- section -->
+	<section>
 
-		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
+		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+		<!-- article -->
+		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">		
 		
-		<header class="entry-header">
+			<!-- post thumbnail -->
+			<?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
+			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+				<?php the_post_thumbnail(array(120,120)); // Declare pixel size you need inside the array ?>
+			</a>
+			<?php endif; ?>
+			<!-- /post thumbnail -->			
+			
+			<!-- post title -->
 			<h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
-			<?php include (TEMPLATEPATH . '/inc/meta.php' ); ?>
-		</header>			
+			<!-- /post title -->
+			
+			<?php include (TEMPLATEPATH . '/inc/meta.php' ); ?>	
 
 			<div class="entry">
 				<?php the_content(); ?>
 			</div>
 
-			<footer class="entry-meta">				
-				Posted in <?php the_category(', ') ?> | <?php the_tags('Tagged ', ', ', ' | '); ?> <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?>
-			</footer>
-
 		</article>
+		<!-- /article -->
 
-	<?php endwhile; ?>
+		<?php endwhile; ?>
 
-	<?php include (TEMPLATEPATH . '/inc/nav.php' ); ?>
+		<?php include (TEMPLATEPATH . '/inc/pagination.php' ); ?>
 
-	<?php else : ?>
+		<?php else : ?>
 
-		<h2>No posts were found.</h2>
+				<!-- article -->
+				<article>
+				<h2><?php _e( 'No posts were found.', 'blank' ); ?></h2>
+				</article>
+				<!-- /article -->
 
-	<?php endif; ?>
+		<?php endif; ?>
+	
+	</section>
+	<!-- /section -->
 
 <?php get_sidebar(); ?>
 
