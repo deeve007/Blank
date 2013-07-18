@@ -95,6 +95,7 @@
 
 		return $classes;
 	}	
+	add_filter('body_class', 'add_slug_to_body_class'); 
 	
 	// Remove Admin bar
 	function remove_admin_bar()
