@@ -18,7 +18,7 @@
 				wp_enqueue_script('modernizr'); 
 
 				wp_deregister_script('jquery');
-				wp_register_script('jquery', (get_template_directory_uri() . "/js/jquery.min.js"),  array(), '1.10.1');
+				wp_register_script('jquery', (get_template_directory_uri() . "/js/jquery.min.js"),  array(), '1.11.0');
 				wp_enqueue_script('jquery');	
 				
 			}

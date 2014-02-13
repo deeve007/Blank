@@ -10,7 +10,7 @@
 	
 	 <!-- Use the .htaccess and remove these lines to avoid edge case issues.
 	 More info: h5bp.com/i/378 -->
-	 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	
 	<!-- Update title tag if using Wordpress SEO by Yoast: http://yoast.com/wordpress/seo/faq/#the-seo-title-output-for-the-plugin-doesnt-work-as-expected -->
 	
@@ -23,10 +23,9 @@
 	<!-- Don't forget to set your site up: http://google.com/webmasters -->
 	
 	<meta name="author" content="Your Name Here">
-	<meta name="Copyright" content="Copyright Your Name Here 2013. All Rights Reserved.">
 
 	<!-- Mobile viewport optimized: h5bp.com/viewport -->
-	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<!-- Place icons  in the theme images directory -->
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/img/favicon.ico">

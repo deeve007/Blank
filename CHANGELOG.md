@@ -1,5 +1,20 @@
 ### [Blank](http://www.schalkburger.za.net/free-blank-wordpress-theme/)
 
+## 2.2 (13 February 2014)
+
+* Updated screenshot.png to new dimensions
+* Updated jQuery to 1.11.0
+* Updated Normalize.css to 3.0.0
+* Fixed theme version number
+* Removed meta copyright tag
+
+## 2.1 (16 July 2013)
+
+* Use one apple-touch-icon instead of six 
+* Add initial-scale=1 to the viewport meta
+* Update to Google Universal Analytics
+* Move font-related declarations from body to html
+
 ## 2.0 (16 July 2013)
 
 * Restructuring of all the theme files and folders
