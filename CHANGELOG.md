@@ -1,5 +1,17 @@
 ### [Blank](http://www.schalkburger.za.net/free-blank-wordpress-theme/)
 
+## 2.4 (27 June 2014)
+
+* Updated Modernizr to 2.8.2
+* Updated jQuery to the Google Hosted Libraries version
+* Fixed some formatting in functions.php
+* Remove image sizes in functions.php that can be set in Settings > Media
+* Updated normalize.css to 3.0.1
+
+## 2.3 (17 April 2014)
+
+* Added comments ID to fix comments anchor link
+
 ## 2.2 (13 February 2014)
 
 * Updated screenshot.png to new dimensions

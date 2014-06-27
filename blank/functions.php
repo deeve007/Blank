@@ -1,24 +1,28 @@
 <?php
-        // Translations can be filed in the /languages/ directory
-        load_theme_textdomain( 'blank', TEMPLATEPATH . '/languages' );
- 
-        $locale = get_locale();
-        $locale_file = TEMPLATEPATH . "/languages/$locale.php";
-        if ( is_readable($locale_file) )
-            require_once($locale_file);
+     
+	 // Translations can be filed in the /languages/ directory
+       
+	load_theme_textdomain( 'blank', TEMPLATEPATH . '/languages' );
+
+	$locale = get_locale();
+	$locale_file = TEMPLATEPATH . "/languages/$locale.php";
+	if ( is_readable($locale_file) )
+		require_once($locale_file);
 	
 	// Add RSS links to <head> section
+	
 	automatic_feed_links();
 	
 	// Load script libraries
+	
 	if ( !function_exists(core_mods) ) {
 		function core_mods() {
 			if ( !is_admin() ) {			
-				wp_register_script('modernizr', (get_template_directory_uri() . "/js/modernizr-2.6.2.min.js"), array(), '2.6.2'); // Modernizr
+				wp_register_script('modernizr', (get_template_directory_uri() . "/js/modernizr-2.8.2.min.js"), array(), '2.8.2'); // Modernizr
 				wp_enqueue_script('modernizr'); 
 
 				wp_deregister_script('jquery');
-				wp_register_script('jquery', (get_template_directory_uri() . "/js/jquery.min.js"),  array(), '1.11.0');
+				wp_register_script('jquery', ("//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"), false);
 				wp_enqueue_script('jquery');	
 				
 			}
@@ -27,6 +31,7 @@
 	}
 
 	// Clean up the <head>
+	
 	function removeHeadLinks() {
     	remove_action('wp_head', 'rsd_link');
     	remove_action('wp_head', 'wlwmanifest_link');
@@ -35,6 +40,7 @@
     remove_action('wp_head', 'wp_generator');
     
     // Register a sample sidebar
+	
 	if (function_exists('register_sidebar')) {
     	register_sidebar(array(
     		'name' => __('Sidebar Widgets','blank' ),
@@ -48,14 +54,13 @@
     }
 	
 	// Add support for Post Formats & Post Thumbnails     
-    add_theme_support( 'post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'audio', 'chat', 'video')); // Add 3.1 post format theme support.
-	add_theme_support( 'post-thumbnails' ); 
-    add_image_size('large', 700, '', true); // Large Thumbnail
-    add_image_size('medium', 250, '', true); // Medium Thumbnail
-    add_image_size('small', 120, '', true); // Small Thumbnail
-    add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
+   
+   add_theme_support( 'post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'audio', 'chat', 'video')); // Add 3.1 post format theme support.
+   add_theme_support( 'post-thumbnails' ); 
+   add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
 	
 	// Add a sample menu.	
+	
 	function register_my_menus() {
 	  register_nav_menus(
 		array( 'primary-menu' => __( 'Primary Menu' ) )
@@ -64,6 +69,7 @@
 	add_action( 'init', 'register_my_menus' );	
 	
 	// Remove the <div> surrounding the dynamic navigation to cleanup markup
+	
 	function my_wp_nav_menu_args($args = '')
 	{
 		$args['container'] = false;
@@ -72,6 +78,7 @@
 	add_filter('wp_nav_menu_args', 'my_wp_nav_menu_args'); 
 	
 	// Remove invalid rel attribute values in the categorylist
+	
 	function remove_category_rel_from_category_list($thelist)
 	{
 		return str_replace('rel="category tag"', 'rel="tag"', $thelist);
@@ -79,6 +86,7 @@
 	add_filter('the_category', 'remove_category_rel_from_category_list'); 
 	
 	// Add page slug to body class, love this - Credit: Starkers Wordpress Theme
+	
 	function add_slug_to_body_class($classes)
 	{
 		global $post;
@@ -98,6 +106,7 @@
 	add_filter('body_class', 'add_slug_to_body_class'); 
 	
 	// Remove Admin bar
+	
 	function remove_admin_bar()
 	{
 		return false;
@@ -105,6 +114,7 @@
 	add_filter('show_admin_bar', 'remove_admin_bar');
 	
 	// Remove thumbnail width and height dimensions that prevent fluid images in the_thumbnail
+	
 	function remove_thumbnail_dimensions( $html )
 	{
 		$html = preg_replace('/(width|height)=\"\d*\"\s/', "", $html);
@@ -114,6 +124,7 @@
 	add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10); 
 	
 	// Threaded Comments
+	
 	function enable_threaded_comments()
 	{
 		if (!is_admin()) {
@@ -125,6 +136,7 @@
 	add_action('get_header', 'enable_threaded_comments');
 	
 	// Custom Comments Callback thanks to html5blank.com
+	
 	function blank_comments($comment, $args, $depth)
 	{
 		$GLOBALS['comment'] = $comment;

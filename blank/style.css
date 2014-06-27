@@ -221,8 +221,8 @@ a img.aligncenter {
 }
 .wp-caption .wp-caption-text,
 .gallery-caption {
-	font-size:11px;
-	line-height:17px;
+	font-size:1em;
+	line-height:1.5;
 	margin:0;
 	padding:0 4px 5px;
 }
