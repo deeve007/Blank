@@ -1,21 +1,17 @@
-		<!-- footer -->
-		<footer class="footer" role="contentinfo">
-			<p>Copyright <?php echo date("Y"); echo " "; bloginfo('name'); ?>. <?php _e('Powered by', 'blank'); ?> 
-					<a href="//wordpress.org" title="WordPress">WordPress</a></p>
-		</footer>
-		<!-- /footer -->
+    <!-- footer -->
+    <footer class="footer" role="contentinfo">
+        <p>Copyright <?php echo date("Y"); echo " "; bloginfo('name'); ?>. <?php _e('Powered by', 'blank'); ?> <a href="//wordpress.org" title="WordPress">WordPress</a></p>
+        <nav class="footer-nav" role="navigation">
+        <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+        </nav>
+    </footer>
+    <!-- /footer -->
 
 	</div>
-	<!-- /page-wrap -->
-
+	<!-- /container -->
 	<?php wp_footer(); ?>
-
-	<!-- jQuery is called via the Wordpress-friendly way via functions.php -->
-
-	<!-- this is where we put our custom functions -->
-	<script src="<?php bloginfo('template_directory'); ?>/js/functions.js"></script>
-
-	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    
+	<?php // Google Analytics: change UA-XXXXX-X to your site's ID ?>
 	<script>
 		(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
 		function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;

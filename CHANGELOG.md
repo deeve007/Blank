@@ -1,5 +1,22 @@
 ### [Blank](http://www.schalkburger.za.net/free-blank-wordpress-theme/)
 
+## 2.5 (16 August 2014)
+
+* Major revamp and restructuring of Blank theme
+* Created one main CSS file in /css that includes normalize.css
+* Restructed the main CSS to reformat section titles, prepend each section with a $ for quick lookup.
+* Added login.css in /css for customizing the login page
+* Changed jQuery behaviour to use Wordpress core version (can change this in functions.php).
+* Added various new functions to functions.php
+* Added pagination without a plugin
+* Added login page styling without a plugin
+* Cleaned up <head> to remove some meta tags and move calls to functions.php
+* Added <?php language_attributes(); ?>
+* Blank now passes the [Theme Check](http://wordpress.org/plugins/theme-check/) tests
+* Created native 404.php template
+* Created archive-custom.php, format-default.php, page-custom.php and single-custom.php templates
+* Updated [Schema markup](https://schema.org/) for posts and pages
+
 ## 2.4 (27 June 2014)
 
 * Updated Modernizr to 2.8.2

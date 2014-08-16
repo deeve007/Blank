@@ -1,51 +1,66 @@
 <?php get_header(); ?>
 
-	<!-- section -->
-	<section>
+    <!-- content -->
+    <div class="content clearfix">
 
-		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+        <!-- section -->
+        <section class="main" role="main">	
 
-		<!-- article -->
-		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">		
-		
-			<!-- post thumbnail -->
-			<?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
-			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-				<?php the_post_thumbnail(array(120,120)); // Declare pixel size you need inside the array ?>
-			</a>
-			<?php endif; ?>
-			<!-- /post thumbnail -->			
-			
-			<!-- post title -->
-			<h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
-			<!-- /post title -->
-			
-			<?php include (TEMPLATEPATH . '/inc/meta.php' ); ?>	
+            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-			<div class="entry">
-				<?php the_content(); ?>
-			</div>
+            <!-- article -->
+            <article id="post-<?php the_ID(); ?>" <?php post_class() ?> role="article">	
+            
+                <!-- article-header -->
+                <header class="article-header">            
 
-		</article>
-		<!-- /article -->
+                    <h1><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>								
+                    <p class="byline vcard">
+                    <span class="date"><?php echo get_the_time( get_option('time_format') ); ?> <?php echo get_the_date( get_option('date_format') ); ?></span>
+                    <span class="author"><?php _e( 'Published by', 'blank' ); ?> <?php the_author_posts_link(); ?></span>
+                    <span class="comments"><?php comments_popup_link( __( 'Leave a comment', 'blank' ), __( '1 Comment', 'blank' ), __( '% Comments', 'blank' )); ?></span>
+                    </p>
+                 
+                 </header>
+                 <!-- /article-header -->  
 
-		<?php endwhile; ?>
+                <!-- entry-content -->
+                <div class="entry-content" itemprop="articleBody">
+                    
+                    <?php if ( has_post_thumbnail() ) { the_post_thumbnail( '' ); } else { ?> <!-- <img src="<?php // echo get_template_directory_uri();?>/img/featured-image.jpg" alt=""/> --> <?php } ?>		
+                    
+                    <?php the_content(); ?>
+                    
+                </div>
+                <!-- /entry-content -->
 
-		<?php include (TEMPLATEPATH . '/inc/pagination.php' ); ?>
+            </article>
+            <!-- /article -->
 
-		<?php else : ?>
+            <?php endwhile; ?>
 
-				<!-- article -->
-				<article>
-				<h2><?php _e( 'No posts were found.', 'blank' ); ?></h2>
-				</article>
-				<!-- /article -->
+            <div class="navigation">
+                <?php blank_pagination(); ?>
+            </div>
 
-		<?php endif; ?>
+            <?php else : ?>
+
+            <!-- article -->
+            <article>
+                <header class="article-header">
+                <h1><?php _e( 'No posts were found.', 'blank' ); ?></h1>
+                </header>
+            </article>
+            <!-- /article -->
+
+            <?php endif; ?>
 	
-	</section>
-	<!-- /section -->
+        </section>
+        <!-- /section -->
 
-<?php get_sidebar(); ?>
+        <?php get_sidebar(); ?>
+
+    </div>
+    <!-- /content -->
 
 <?php get_footer(); ?>

@@ -1,4 +1,4 @@
-<form action="<?php bloginfo('siteurl'); ?>" class="search-form" method="get">
+<form action="<?php echo home_url(); ?>" class="search-form" method="get">
     <div>
         <label for="search-submit" class="screen-reader-text visuallyhidden">Search</label>
         <input type="search" id="search-submit" class="search-input" name="s" value="" />        

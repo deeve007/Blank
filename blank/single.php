@@ -1,58 +1,37 @@
 <?php get_header(); ?>
 
-	<!-- section -->
-	<section role="main">
-	
+    <!-- content -->
+    <div class="content clearfix">
 
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+        <!-- section -->
+        <section role="main">	
 
-		<!-- article -->
-		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
-			
-			<!-- post title -->
-			<h1><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>		
-			<!-- /post title -->	
-			
-			<?php include (TEMPLATEPATH . '/inc/meta.php' ); ?>	
+            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-			<div class="entry">
-				
-				<?php the_content(); ?>
+            <?php            
+            get_template_part( 'format-default', get_post_format() );            
+            ?>    
 
-				<?php wp_link_pages(array('before' => 'Pages: ', 'next_or_number' => 'number')); ?>	
-			
-				<?php the_tags( __( 'Tags: ', 'blank' ), ', ', '<br>'); ?>
-			
-				<p><?php _e( 'Categorised in: ', 'blank' ); the_category(', '); ?></p>
-				
-				<p><?php _e( 'This post was written by ', 'blank' ); the_author(); ?></p>
+            <?php endwhile; ?>
+            
+            <?php else: ?>
+        
+            <!-- article -->
+            <article>
+                <header class="article-header">       
+                <h1><?php _e( 'Sorry, no post to display.', 'blank' ); ?></h1>
+                </header>
+            </article>
+            <!-- /article -->
+        
+            <?php endif; ?>
+        
+        </section>
+        <!-- /section -->
+	
+        <?php get_sidebar(); ?>
 
-			</div>
-			
-			<?php edit_post_link();  ?>
-			
-			<?php comments_template(); ?>
-			
-		</article>
-		<!-- /article -->
-
-	<?php endwhile; ?>
-	
-	<?php else: ?>
-	
-		<!-- article -->
-		<article>
-			
-			<h1><?php _e( 'Sorry, nothing to display.', 'blank' ); ?></h1>
-			
-		</article>
-		<!-- /article -->
-	
-	<?php endif; ?>
-	
-	</section>
-	<!-- /section -->
-	
-<?php get_sidebar(); ?>
+    </div>
+    <!-- /content -->
 
 <?php get_footer(); ?>

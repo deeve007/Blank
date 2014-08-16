@@ -1,6 +1,6 @@
 # [Blank](http://www.schalkburger.za.net/free-blank-wordpress-theme/)
 
-This 'Blank' theme is a bare-bones HTML5 WordPress theme perfect for the starting point of any theme development.
+The 'Blank' theme is a bare-bones HTML5 WordPress theme perfect for the starting point of any theme development.
 
 ## Features
 

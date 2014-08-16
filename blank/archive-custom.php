@@ -1,3 +1,10 @@
+<?php
+/*
+Custom Post Type Template
+For more info: http://codex.wordpress.org/Post_Type_Templates
+*/
+?>
+
 <?php get_header(); ?>
 
     <!-- content -->
@@ -41,8 +48,7 @@
                 <!-- article-header -->
                 <header class="article-header">
                 
-                    <h2 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
-                    <?php the_title(); ?></a></h2>
+                    <h2 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
                     <p class="byline vcard">
                     <span class="date"><?php echo get_the_time( get_option('time_format') ); ?> <?php echo get_the_date( get_option('date_format') ); ?></span>
                     <span class="author"><?php _e( 'Published by', 'blank' ); ?> <?php the_author_posts_link(); ?></span>
@@ -55,7 +61,7 @@
                 <!-- entry-content -->
                 <div class="entry-content" itemprop="articleBody">				
                     
-                    <?php if ( has_post_thumbnail() ) { the_post_thumbnail( '' ); } else { ?> <!-- <img src="<?php // echo get_template_directory_uri();?>/img/featured-image.jpg" alt=""/> --> <?php } ?>	
+                    <?php if ( has_post_thumbnail() ) { the_post_thumbnail( '' ); } else { ?> <!-- <img src="<?php // echo get_template_directory_uri();?>/img/featured-image.jpg" alt=""/> --> <?php } ?>		
                     
                     <?php the_excerpt(); ?>
                     
