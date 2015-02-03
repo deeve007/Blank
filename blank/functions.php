@@ -60,6 +60,9 @@ if ( ! isset( $content_width ) ) {
 
 function blank_styles()
 {
+    // wp_register_style('googlefonts', 'http://fonts.googleapis.com/css?family=Open+Sans:300,700,400');
+    // wp_enqueue_style( 'googlefonts');
+    
     wp_register_style('blank', get_template_directory_uri() . '/css/main.css', array(), '1.0', 'all');
     wp_enqueue_style('blank'); // Enqueue it!
 }

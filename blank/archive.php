@@ -68,7 +68,7 @@
             <?php endwhile; ?>
 
             <div class="navigation">
-                <?php if (function_exists("custom_pagination")) { custom_pagination($additional_loop->max_num_pages);} ?>
+                <?php blank_pagination(); ?>
             </div>
             
             <?php else : ?>

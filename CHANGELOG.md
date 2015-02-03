@@ -1,5 +1,11 @@
 ### [Blank](http://www.schalkburger.za.net/free-blank-wordpress-theme/)
 
+## 2.6 (3 February 2015)
+
+# Added Google Fonts enqueue to functions.php
+# Change sidebar <h2> tags to <h3> to match functions.php
+# Various formatting fixes
+
 ## 2.5 (16 August 2014)
 
 * Major revamp and restructuring of Blank theme
