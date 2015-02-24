@@ -41,9 +41,7 @@
 
             <?php endwhile; ?>	
 
-            <div class="navigation">
-                <?php blank_pagination(); ?>
-            </div>
+            <?php blank_pagination(); ?>
 
             <?php else : ?>
 

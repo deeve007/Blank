@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
     <!-- section -->
-    <section role="main">
+    <section class="main" role="main">
     
     	<!-- article -->
 		<article id="post-<?php the_ID(); ?>" <?php post_class() ?> role="article">	

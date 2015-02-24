@@ -7,7 +7,7 @@ The 'Blank' theme is a bare-bones HTML5 WordPress theme perfect for the starting
 * Based on HTML5 Boilerplate
 * Normalizing of styles via [normalize.css](ttp://necolas.github.com/normalize.css/)
 * Some core Wordpress presentational styles are kept
+* Large colletction of useful functions collected in functions.php
 * Includes local loading of [Modernizr](http://modernizr.com/) and jQuery. 
 * Includes optimized tracking code for Google Analytics
 * Conditional targeting for Internet Explorer
-* Useful functions collected in functions.php

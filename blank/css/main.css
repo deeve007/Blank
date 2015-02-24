@@ -471,8 +471,7 @@ textarea {
 }
 
 html {
-  font-size: 1em;
-  line-height: 1.4;
+  font: normal 1em/1.5 serif; /* base font size 1em with 1.5 line-height */
 }
 
 p {
@@ -496,19 +495,24 @@ a {
   color:#444;
   text-decoration:none;
 }
+
 a:hover {
   color:#444;
 }
+
 a:focus {
   outline:0;
 }
+
 a:hover,
 a:active {
   outline:0;
 }
+
 input:focus {
   outline:0;
 }
+
 /*	j.mp/webkit-tap-highlight-color */
 a:link {
   -webkit-tap-highlight-color: #fcd700;
@@ -525,11 +529,13 @@ a:link {
 	color:#FFF;
 	text-shadow:none;
 }
+
 ::-webkit-selection {
 	background: #b3d4fc;
 	color:#FFF;
 	text-shadow:none;
 }
+
 ::-moz-selection {
 	background:#b3d4fc;
 	color:#FFF;
@@ -586,7 +592,6 @@ textarea {
   display: inline-block;
   position: relative;
   text-decoration: none;
-  font-size: 1em;
   font-weight: normal;
   padding: 0.5em;
   border-radius: 2px;
@@ -608,7 +613,6 @@ textarea {
 input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], select, textarea, .field { 
   display: block;
   padding: 0.5em;
-  font-size: 1em;
   color: #5c6b80;
   border-radius: 2px;
   vertical-align: middle;
@@ -651,6 +655,10 @@ textarea {
 
 .header-nav {
 	
+}
+
+.footer-nav {
+  
 }
 
 /* content */
@@ -890,37 +898,26 @@ Required reading: http://bradfrostweb.com/blog/post/7-habits-of-highly-effective
 */
 
 /* Small devices (tablets, 768px and up) */
-@media only screen and (min-width: 48em) {
-    .container {
-      width: 46em;
-      margin: 0 auto;
-  }
+@media only screen and (min-width: 768px) {
+
 }
 
 /* Medium devices (desktops, 992px and up) */
-@media only screen and (min-width: 62em) {
-    .container {
-      width: 60em;
-      margin: 0 auto;
-  }    
+@media only screen and (min-width: 992px) {
+  
 }
 
 /* Large devices (large desktops, 1200px and up) */
-@media only screen and (min-width: 75em) {
-    .container {
-      width: 73em;
-      margin: 0 auto;
-  }        
+@media only screen and (min-width: 1200px) {
+     
 }
 
 /* High pixel-density devices */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) { 
-/*
-  .logo {
+/*  .logo {
     background-image:url(img/logo@2x.png); 
     background-size: 50px 50px;
-  }
-*/  
+  }*/
 }
 
 /*------------------------------------*\

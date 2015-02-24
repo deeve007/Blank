@@ -73,9 +73,7 @@ For more info: http://codex.wordpress.org/Post_Type_Templates
 
             <?php endwhile; ?>
 
-            <div class="navigation">
-                <?php if (function_exists("custom_pagination")) { custom_pagination($additional_loop->max_num_pages);} ?>
-            </div>
+            <?php blank_pagination(); ?>
             
             <?php else : ?>
 

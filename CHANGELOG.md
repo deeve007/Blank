@@ -1,10 +1,22 @@
 ### [Blank](http://www.schalkburger.za.net/free-blank-wordpress-theme/)
 
+## 2.7 (2015)
+
+* Updated favicon link tag to just "icon" as per [Mathias](https://mathiasbynens.be/notes/rel-shortcut-icon)
+* Added "main" class to section's with role="main"
+* Removed extra div surrounding blank_pagination();
+* Updated navigation on archive-custom.php to blank_pagination(); 
+* Updated index.php to load the default post template part
+* Added default button styles to login.css
+* Added sample code to functions.php to add your own custom button to the Wordpress editor
+* Changed responsive breakpoint measurements to pixels
+* Updated base font size to 1em with 1.5 line height
+
 ## 2.6 (3 February 2015)
 
-# Added Google Fonts enqueue to functions.php
-# Change sidebar <h2> tags to <h3> to match functions.php
-# Various formatting fixes
+* Added Google Fonts enqueue to functions.php
+* Change sidebar <h2> tags to <h3> to match functions.php
+* Various formatting fixes
 
 ## 2.5 (16 August 2014)
 

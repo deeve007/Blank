@@ -72,7 +72,7 @@ add_action('wp_enqueue_scripts', 'blank_styles'); // Add Theme Stylesheet
 // Place icons  in the theme images directory. Want more? http://realfavicongenerator.net/
 
 function blank_favicons() {
-echo '<link rel="shortcut icon" href="'. get_template_directory_uri() .'/img/favicon.ico" />';
+echo '<link rel="icon" href="'. get_template_directory_uri() .'/img/favicon.ico" />';
 echo "\n";
 echo '<link rel="apple-touch-icon" href="'. get_template_directory_uri() .'/img/apple-touch-icon.png" />';
 }
@@ -399,6 +399,36 @@ function blank_login_title() { return get_option( 'blogname' ); } // changing th
 
 // add_action( 'login_enqueue_scripts', 'blank_login_css', 10 ); // calling it only on the login page
 // add_filter( 'login_headerurl', 'blank_login_url' );
-// add_filter( 'login_headertitle', 'blank_login_title' );    
+// add_filter( 'login_headertitle', 'blank_login_title' );   
+
+// Add a custom button to editor
+
+function blank_add_button() {
+    global $typenow;
+    // check user permissions
+    if ( !current_user_can('edit_posts') && !current_user_can('edit_pages') ) {
+    return;
+    }
+    // verify the post type
+    if( ! in_array( $typenow, array( 'post', 'page' ) ) )
+        return;
+    // check if WYSIWYG is enabled
+    if ( get_user_option('rich_editing') == 'true') {
+        add_filter("mce_external_plugins", "blank_add_tinymce_button");
+        add_filter('mce_buttons', 'blank_register_button');
+    }
+}
+
+// add_action('admin_head', 'blank_add_button');
+
+function blank_add_tinymce_button($plugin_array) {
+    $plugin_array['blank_button'] = get_template_directory_uri() . '/js/button.js';
+    return $plugin_array;
+}
+
+function blank_register_button($buttons) {
+   array_push($buttons, "blank_button");
+   return $buttons;
+} 
   
 ?>
